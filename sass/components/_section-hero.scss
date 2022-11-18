@@ -26,9 +26,9 @@
 
   // Media for "background-image"
 
-  @media screen and (min-device-pixel-ration: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+  @media (min-device-pixel-ration: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -43,9 +43,9 @@
       ),
       url(../../images/tablet/img-t-hero.jpeg);
 
-    @media screen and (min-device-pixel-ration: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    @media (min-device-pixel-ration: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
@@ -54,16 +54,16 @@
     }
   }
 
-  @media (min-width: 769px) {
+  @media screen and (min-width: 769px) {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url(../../images/desktop/img-d-hero.jpeg);
 
-    @media screen and (min-device-pixel-ration: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    @media (min-device-pixel-ration: 2) ,
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
