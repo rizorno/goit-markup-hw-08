@@ -1,0 +1,80 @@
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid $border-header;
+
+  @media screen and (min-width: $tablet) {
+    // Rewrited "padding-top and padding-bottom"
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &-container {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    // Hiding Mode
+    display: none;
+  }
+
+  &__link {
+    color: $color-title;
+
+    display: block;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color $transition;
+
+    &:hover,
+    &:focus {
+      color: $hover-focus-button;
+    }
+  }
+
+  &__link--current {
+    color: $hover-focus-button;
+
+    position: relative;
+    transition: color $transition;
+
+    &::after {
+      color: $hover-focus-button;
+
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 4px;
+      transform: translateY(-100%);
+
+      content: "";
+      display: flex;
+
+      background: $hover-focus-button;
+      border-radius: 2px;
+    }
+  }
+}

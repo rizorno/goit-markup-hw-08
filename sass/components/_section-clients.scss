@@ -1,0 +1,79 @@
+.section-clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    // Rewrited "padding-top and padding-bottom"
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    color: $color-title;
+
+    font-size: 28px;
+    line-height: 1.179;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "font-size and line-height"
+      font-size: 36px;
+      line-height: 1.167;
+    }
+  }
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  // For small screens
+  @media screen and (max-width: 319px) {
+    display: block;
+
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+
+    @media screen and (min-width: $tablet) {
+      // Rewrited "flex-basis"
+      flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "flex-wrap and flex-basis"
+      flex-basis: calc((100% - 5 * 30px) / 6);
+    }
+  }
+
+  &__link {
+    height: 92px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+
+    fill: $color-icon;
+
+    transition: border-color $transition, fill $transition;
+
+    &:hover,
+    &:focus {
+      border-color: $hover-focus-button;
+      fill: $hover-focus-button;
+    }
+  }
+}

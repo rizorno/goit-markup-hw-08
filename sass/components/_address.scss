@@ -1,0 +1,46 @@
+.address {
+  width: 231px;
+  display: inline;
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-style: normal;
+
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    transition: color $transition;
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "text-aling"
+      text-align: left;
+    }
+
+    &:hover,
+    &:focus {
+      color: $hover-focus-button;
+    }
+  }
+
+  &__link--white {
+    color: $color-primery-white;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "margin-bottom"
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link--margin {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "margin-bottom"
+      margin-bottom: 9px;
+    }
+  }
+}

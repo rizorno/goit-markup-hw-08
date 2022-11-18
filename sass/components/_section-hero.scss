@@ -1,0 +1,97 @@
+.section-hero {
+  max-width: 1600px;
+
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  background-color: $background-hero;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../images/mobile/img-m-hero.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: $desktop) {
+    // Rewrited "padding-top and padding-bottom"
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  // Media for "background-image"
+
+  @media screen and (min-device-pixel-ration: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/mobile/img-m-hero@2x.jpeg);
+  }
+
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/tablet/img-t-hero.jpeg);
+
+    @media screen and (min-device-pixel-ration: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/tablet/img-t-hero@2x.jpeg);
+    }
+  }
+
+  @media (min-width: 769px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/desktop/img-d-hero.jpeg);
+
+    @media screen and (min-device-pixel-ration: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/desktop/img-d-hero@2x.jpeg);
+    }
+  }
+
+  &__title {
+    // Limitation of block size
+    max-width: 360px;
+
+    color: $color-primery-white;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    margin: 0 auto 30px auto;
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "max-width, font-size and line-height"
+      max-width: 696px;
+
+      font-size: 44px;
+      line-height: 1.364;
+    }
+  }
+}

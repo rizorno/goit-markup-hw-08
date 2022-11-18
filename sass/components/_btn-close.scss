@@ -1,0 +1,25 @@
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: fill $transition;
+
+  &__icon {
+    display: block;
+    fill: #000000;
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $hover-focus-button;
+  }
+}

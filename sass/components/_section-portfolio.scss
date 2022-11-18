@@ -1,0 +1,122 @@
+.section-portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    // Rewrited "padding-top and padding-bottom"
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    color: transparent;
+    font-size: 0;
+    margin: 0;
+  }
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  @media screen and (min-width: 650px) {
+    // Rewrited "justify-contetnt"
+    justify-content: flex-start;
+  }
+
+  &__item {
+    @media screen and (min-width: 650px) {
+      flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+  }
+
+  &__link {
+    transition: box-shadow $transition;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .portfolio__hover-text,
+    &:focus .portfolio__hover-text {
+      transform: translateY(-100%);
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__box-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__hover-text {
+    position: absolute;
+    overflow: auto;
+
+    background-color: $hover-text;
+    color: $color-primery-white;
+
+    font-size: 18px;
+    line-height: 1.556;
+
+    height: 100%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+
+    padding: 5px 24px;
+
+    overflow-y: auto;
+
+    transition: transform $transition;
+  }
+
+  &__box-text {
+    padding: 20px 24px;
+
+    border: 1px solid $border-potfolio;
+  }
+
+  &__box-text--tab-padding {
+    @media screen and (min-width: 650px) and (max-width: 790px) {
+      // Rewrited "padding-bottom: 20px"
+      padding-bottom: 56px;
+    }
+  }
+
+  &__title {
+    color: $color-title;
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  &__type {
+    color: $color-text;
+
+    line-height: 1.875;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

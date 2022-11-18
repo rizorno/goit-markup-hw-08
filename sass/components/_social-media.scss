@@ -1,0 +1,22 @@
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &__link {
+    display: flex;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    border-radius: 50%;
+
+    transition: background-color $transition;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-focus-button;
+    }
+  }
+}

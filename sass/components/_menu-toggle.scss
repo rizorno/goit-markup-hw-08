@@ -1,0 +1,147 @@
+.menu-toggle {
+  @media screen and (min-width: $tablet) {
+    // Hiding Mode
+    display: none;
+  }
+
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: $color-primery-white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &.js-close-menu {
+    transition: fill $transition;
+  }
+
+  &.js-close-menu:hover,
+  &.js-close-menu:focus {
+    fill: $hover-focus-button;
+  }
+}
+
+.menu-container {
+  // Hiding Mode
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 48px 5px 48px 40px;
+
+  background-color: $background-global;
+
+  transform: translateX(100%);
+
+  transition: transform $transition;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu {
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &__link {
+      display: block;
+      text-decoration: none;
+
+      color: $color-title;
+
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.175;
+      letter-spacing: 0.02em;
+
+      transition: color $transition;
+
+      &:hover,
+      &:focus {
+        color: $hover-focus-button;
+      }
+    }
+
+    &__link--current {
+      color: $hover-focus-button;
+    }
+  }
+
+  .mobile-contacts {
+    margin-bottom: 64px;
+
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &__link {
+      display: block;
+      text-decoration: none;
+
+      color: $hover-focus-button;
+
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.176;
+      letter-spacing: 0.02em;
+
+      // For small screens
+      @media screen and (max-width: 320px) {
+        font-size: 30px;
+      }
+
+      &--color {
+        color: $color-text;
+
+        font-size: 24px;
+        line-height: 1.167;
+      }
+    }
+  }
+
+  .mobile-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__item:not(:last-child) {
+      padding-right: 10px;
+
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__link {
+      color: $hover-focus-button;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.222;
+      letter-spacing: 0.02em;
+    }
+  }
+}

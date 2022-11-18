@@ -1,0 +1,60 @@
+.header-contacts {
+  @media screen and (max-width: 767px) {
+    // Hiding Mode
+    display: none;
+  }
+
+  display: inline-block;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+
+  padding-top: 19px;
+  padding-bottom: 19px;
+
+  &--margin-left {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    // Rewrited "display, fonts and paddings"
+    display: flex;
+    column-gap: 50px;
+
+    font-size: 14px;
+    line-height: 1.143;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "margin-right" and added "margin-bottom"
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: $color-text;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: color $transition;
+
+    &:hover,
+    &:focus {
+      color: $hover-focus-button;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

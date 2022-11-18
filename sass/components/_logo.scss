@@ -1,0 +1,39 @@
+.logo {
+  color: $logo-web;
+
+  font-family: $font-family-logo;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.167;
+
+  @media screen and (min-width: $desktop) {
+    // Rewrited "font-size and line-height"
+    font-size: 26px;
+    line-height: 1.192;
+  }
+
+  &__half {
+    color: $logo-studio;
+
+    &--color {
+      color: $color-primery-white;
+    }
+  }
+
+  &--margin-right {
+    @media screen and (min-width: $tablet) {
+      margin-right: 87px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      // Rewrited "margin-right"
+      margin-right: 92px;
+    }
+  }
+
+  &--margin-bottom {
+    display: block;
+
+    margin-bottom: 20px;
+  }
+}
