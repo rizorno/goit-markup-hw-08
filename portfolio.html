@@ -65,7 +65,7 @@
               </li>
 
               <li class="mobile-menu__item">
-                <a href="#" class="mobile-menu__link">Контакти</a>
+                <a href="#contacts" class="mobile-menu__link">Контакти</a>
               </li>
             </ul>
 
@@ -139,7 +139,7 @@
             </li>
 
             <li class="menu__item">
-              <a href="#" class="menu__link">Контакти</a>
+              <a href="#contacts" class="menu__link">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -177,28 +177,38 @@
           <!-- Фільтер -->
           <ul class="filters filters--margin-bottom">
             <li class="filters__item">
-              <button type="button" class="filters__btn">Усі</button>
+              <button type="button" name="all" class="filters__btn active">
+                Усі
+              </button>
             </li>
 
             <li class="filters__item">
-              <button type="button" class="filters__btn">Веб-сайти</button>
+              <button type="button" name="web" class="filters__btn">
+                Веб-сайти
+              </button>
             </li>
 
             <li class="filters__item">
-              <button type="button" class="filters__btn">Додатки</button>
+              <button type="button" name="application" class="filters__btn">
+                Додатки
+              </button>
             </li>
 
             <li class="filters__item">
-              <button type="button" class="filters__btn">Дизайн</button>
+              <button type="button" name="design" class="filters__btn">
+                Дизайн
+              </button>
             </li>
 
             <li class="'filters__item' item">
-              <button type="button" class="filters__btn">Маркетинг</button>
+              <button type="button" name="marketing" class="filters__btn">
+                Маркетинг
+              </button>
             </li>
           </ul>
           <!-- Портфоліо робіт -->
           <ul class="portfolio">
-            <li class="portfolio__item">
+            <li class="portfolio__item js-web">
               <a
                 href="#"
                 class="portfolio__link"
@@ -250,7 +260,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-design">
               <a
                 href="#"
                 class="portfolio__link"
@@ -302,7 +312,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-application">
               <a
                 href="#"
                 class="portfolio__link"
@@ -352,7 +362,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-marketing">
               <a
                 href="#"
                 class="portfolio__link"
@@ -402,7 +412,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-application">
               <a
                 href="#"
                 class="portfolio__link"
@@ -452,7 +462,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-web">
               <a
                 href="#"
                 class="portfolio__link"
@@ -504,7 +514,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-design">
               <a
                 href="#"
                 class="portfolio__link"
@@ -554,7 +564,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-marketing">
               <a
                 href="#"
                 class="portfolio__link"
@@ -604,7 +614,7 @@
               </a>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item js-application">
               <a
                 href="#"
                 class="portfolio__link"
@@ -665,7 +675,7 @@
     </main>
 
     <!-- Підвал -->
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <div class="container footer-container">
         <div class="footer__box-contacts">
           <!-- Логотип -->
@@ -780,5 +790,6 @@
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/filter.js"></script>
   </body>
 </html>
