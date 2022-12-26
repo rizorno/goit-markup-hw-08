@@ -9,6 +9,11 @@ let refs = {
   btnMarketing: document.querySelector("[name='marketing']"),
 };
 
+refs.btnWeb.addEventListener("click", () => sortList("js-web"));
+refs.btnApplication.addEventListener("click", () => sortList("js-application"));
+refs.btnDesign.addEventListener("click", () => sortList("js-design"));
+refs.btnMarketing.addEventListener("click", () => sortList("js-marketing"));
+
 refs.btns.addEventListener("click", (e) => {
   if (e.target !== "BUTTON") {
     if (document.querySelector(".active") === null) {
@@ -17,14 +22,6 @@ refs.btns.addEventListener("click", (e) => {
     document.querySelector(".active").classList.remove("active");
   }
 });
-
-refs.btnAll.onclick = () => {
-  let activeAll = document.querySelectorAll(".js-hidden");
-  activeAll.forEach((element) => {
-    element.classList.remove("js-hidden");
-  });
-  return;
-};
 
 function sortList(nameSelector) {
   refs.listComponents.forEach((element) => {
@@ -36,7 +33,10 @@ function sortList(nameSelector) {
   });
 }
 
-refs.btnWeb.addEventListener("click", () => sortList("js-web"));
-refs.btnApplication.addEventListener("click", () => sortList("js-application"));
-refs.btnDesign.addEventListener("click", () => sortList("js-design"));
-refs.btnMarketing.addEventListener("click", () => sortList("js-marketing"));
+refs.btnAll.onclick = () => {
+  let activeAll = document.querySelectorAll(".js-hidden");
+  activeAll.forEach((element) => {
+    element.classList.remove("js-hidden");
+  });
+  return;
+};
