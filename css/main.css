@@ -1390,11 +1390,6 @@ p {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
-@media screen and (min-width: 650px) and (max-width: 790px) {
-  .portfolio__box-text--tab-padding {
-    padding-bottom: 56px;
-  }
-}
 .portfolio__title {
   color: #212121;
   font-size: 18px;
