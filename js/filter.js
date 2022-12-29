@@ -9,18 +9,19 @@ let refs = {
   btnMarketing: document.querySelector("[name='marketing']"),
 };
 
+refs.btnAll.classList.add("active");
+
 refs.btnWeb.addEventListener("click", () => sortList("js-web"));
 refs.btnApplication.addEventListener("click", () => sortList("js-application"));
 refs.btnDesign.addEventListener("click", () => sortList("js-design"));
 refs.btnMarketing.addEventListener("click", () => sortList("js-marketing"));
 
 refs.btns.addEventListener("click", (e) => {
-  if (e.target !== "BUTTON") {
-    if (document.querySelector(".active") === null) {
-      return;
-    }
-    document.querySelector(".active").classList.remove("active");
+  if (e.target === refs.btns) {
+    return;
   }
+  document.querySelector(".active").classList.remove("active");
+  e.target.classList.toggle("active");
 });
 
 function sortList(nameSelector) {
