@@ -12,7 +12,7 @@ let refs = {
 refs.btnAll.classList.add("active");
 
 refs.listFilters.addEventListener("click", (e) => {
-  if (e.target === refs.listFilters) {
+  if (e.target.nodeName !== "BUTTON") {
     return;
   }
   document.querySelector(".active").classList.remove("active");
