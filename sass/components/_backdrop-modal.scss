@@ -13,14 +13,18 @@
 
   background-color: rgba(0, 0, 0, 0.2);
 
+  opacity: 1;
+
   transition: opacity $transition;
 }
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: inherit;
-  scale: 0;
+  //   visibility: inherit;
+  //   scale: 0;
+
+  transition: opacity $transition visibility $transition;
 }
 
 .js-body-scroll {
@@ -39,8 +43,8 @@
   width: 450px;
   //   height: 609px;
 
-  margin: auto;
   padding: 40px;
+  margin: auto;
 
   background-color: $background-global;
 
