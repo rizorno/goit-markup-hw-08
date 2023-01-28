@@ -13,21 +13,31 @@
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: scale $transition, opacity $transition;
+  transition: opacity $transition;
 }
 
 .is-hidden {
-  visibility: inherit;
   opacity: 0;
   pointer-events: none;
+  visibility: inherit;
   scale: 0;
 }
 
+.js-body-scroll {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 .modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
 
   width: 450px;
-  height: 609px;
+  //   height: 609px;
 
   margin: auto;
   padding: 40px;
@@ -38,10 +48,16 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  transition: transform $transition;
+
+  .backdrop.is-hidden & {
+    transform: scale(0.8) translate(-50%, -50%);
+  }
+
   @media screen and (min-width: $desktop) {
     // Rewrited "width and height"
     width: 528px;
-    height: 581px;
+    //  height: 581px;
   }
 
   &__title {
