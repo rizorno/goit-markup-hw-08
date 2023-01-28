@@ -15,16 +15,17 @@
 
   opacity: 1;
 
-  transition: opacity $transition;
+  transition: opacity $transition, visibility $transition;
 }
 
 .is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
   //   visibility: inherit;
   //   scale: 0;
 
-  transition: opacity $transition visibility $transition;
+  transition: opacity $transition, visibility $transition;
 }
 
 .js-body-scroll {
